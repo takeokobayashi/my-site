@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>タスク登録</title>
+
+<script type="text/javascript"> 
+<!-- 
+
+function check(){
+
+	if(window.confirm('登録してよろしいですか？')){ // 確認ダイアログを表示
+
+		return true; // 「OK」時は送信を実行
+
+	}
+	else{ // 「キャンセル」時の処理
+
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+
+	}
+
+}
+
+// -->
+</script>
+
+
+</head>
+<body>
+タスク登録<br>
+</body>
+<form method="POST" action="add5.php" onSubmit="return check()"><br>
+タイトル:<input type="text" name="title" required><br>
+<br>
+予定日:
+<p><input type="date" name="scheduled_date" min="2016-01-01" max="2020-12-31" value="2016-01-01"></p>
+
+完了日:
+<p><input type="date" name="completion_date" min="2016-01-01" max="2020-12-31" value="2016-01-01"></p>
+
+優先度:
+<input type="radio" name="priority" value="1">余裕あり
+<input type="radio" name="priority" value="2" checked>普通
+<input type="radio" name="priority" value="3">急ぎ
+
+<br>
+<br>
+内容:
+<textarea name="content" cols="40" rows="4" maxlength="150"></textarea>
+<br>
+
+
+<p><input type="submit" value="登録"></p>
+</form>
+</body>
+</html>
